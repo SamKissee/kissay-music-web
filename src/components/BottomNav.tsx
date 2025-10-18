@@ -86,8 +86,8 @@ const navItems = [
     ),
   },
   {
-    name: "Merch",
-    href: LINKS.merch,
+    name: "Store",
+    href: "/store",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,6 @@ const navItems = [
         />
       </svg>
     ),
-    external: true,
   },
 ];
 
@@ -119,26 +118,7 @@ export default function BottomNav() {
           {/* Navigation Items */}
           <div className="flex items-center justify-around px-2 py-3 sm:py-4">
             {navItems.map((item) => {
-              const isActive = item.external ? false : pathname === item.href;
-
-              if (item.external) {
-                return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all duration-200 hover:bg-white/10 active:scale-95"
-                  >
-                    <div className="text-gray-400 hover:text-white transition-colors duration-200 w-6 h-6 flex items-center justify-center">
-                      {item.icon}
-                    </div>
-                    <span className="hidden sm:block text-[10px] font-medium text-gray-400 hover:text-white transition-colors duration-200">
-                      {item.name}
-                    </span>
-                  </a>
-                );
-              }
+              const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
 
               return (
                 <Link

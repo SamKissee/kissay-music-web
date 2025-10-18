@@ -73,7 +73,7 @@ const navItems = [
             viewBox: "0 0 24 24",
             strokeWidth: 1.5,
             stroke: "currentColor",
-            className: "w-6 h-6",
+            className: "w-5 h-5",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
@@ -98,7 +98,7 @@ const navItems = [
             viewBox: "0 0 24 24",
             strokeWidth: 1.5,
             stroke: "currentColor",
-            className: "w-6 h-6",
+            className: "w-5 h-5",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
@@ -123,7 +123,7 @@ const navItems = [
             viewBox: "0 0 24 24",
             strokeWidth: 1.5,
             stroke: "currentColor",
-            className: "w-6 h-6",
+            className: "w-5 h-5",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
@@ -140,19 +140,19 @@ const navItems = [
         }, ("TURBOPACK compile-time value", void 0))
     },
     {
-        name: 'Merch',
-        href: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$constants$2f$links$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LINKS"].merch,
+        name: 'Contact',
+        href: '/contact',
         icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             fill: "none",
             viewBox: "0 0 24 24",
             strokeWidth: 1.5,
             stroke: "currentColor",
-            className: "w-6 h-6",
+            className: "w-5 h-5",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
-                d: "M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                d: "M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
             }, void 0, false, {
                 fileName: "[project]/src/components/BottomNav.tsx",
                 lineNumber: 40,
@@ -162,33 +162,33 @@ const navItems = [
             fileName: "[project]/src/components/BottomNav.tsx",
             lineNumber: 39,
             columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0)),
-        external: true
+        }, ("TURBOPACK compile-time value", void 0))
     },
     {
-        name: 'Contact',
-        href: '/contact',
+        name: 'Merch',
+        href: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$constants$2f$links$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LINKS"].merch,
         icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             fill: "none",
             viewBox: "0 0 24 24",
             strokeWidth: 1.5,
             stroke: "currentColor",
-            className: "w-6 h-6",
+            className: "w-5 h-5",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
-                d: "M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                d: "M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
             }, void 0, false, {
                 fileName: "[project]/src/components/BottomNav.tsx",
-                lineNumber: 50,
+                lineNumber: 49,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/BottomNav.tsx",
-            lineNumber: 49,
+            lineNumber: 48,
             columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0))
+        }, ("TURBOPACK compile-time value", void 0)),
+        external: true
     }
 ];
 function BottomNav() {
@@ -197,87 +197,78 @@ function BottomNav() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
         className: "fixed bottom-0 left-0 right-0 z-50 pb-safe",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mx-auto max-w-lg px-4 pb-4",
+            className: "mx-auto max-w-md px-4 pb-4",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 bg-white/70 dark:bg-black/70 backdrop-blur-xl rounded-[24px] border border-white/20 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/BottomNav.tsx",
-                        lineNumber: 64,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative flex items-center justify-around px-2 py-2",
-                        children: navItems.map((item)=>{
-                            const isActive = item.external ? false : pathname === item.href;
-                            if (item.external) {
-                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: item.href,
-                                    target: "_blank",
-                                    rel: "noopener noreferrer",
-                                    className: "group flex flex-col items-center justify-center min-w-[48px] sm:min-w-[64px] py-2 px-2 sm:px-3 rounded-2xl transition-all duration-200 hover:bg-black/5 dark:hover:bg-white/10 active:scale-95",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200",
-                                            children: item.icon
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/BottomNav.tsx",
-                                            lineNumber: 80,
-                                            columnNumber: 21
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "hidden sm:block text-[11px] font-medium mt-1 text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200",
-                                            children: item.name
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/BottomNav.tsx",
-                                            lineNumber: 83,
-                                            columnNumber: 21
-                                        }, this)
-                                    ]
-                                }, item.name, true, {
-                                    fileName: "[project]/src/components/BottomNav.tsx",
-                                    lineNumber: 73,
-                                    columnNumber: 19
-                                }, this);
-                            }
-                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                className: "relative bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-lg overflow-hidden",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center justify-around px-2 py-3",
+                    children: navItems.map((item)=>{
+                        const isActive = item.external ? false : pathname === item.href;
+                        if (item.external) {
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                 href: item.href,
-                                className: "group flex flex-col items-center justify-center min-w-[48px] sm:min-w-[64px] py-2 px-2 sm:px-3 rounded-2xl transition-all duration-200 active:scale-95 ".concat(isActive ? 'bg-black/10 dark:bg-white/20' : 'hover:bg-black/5 dark:hover:bg-white/10'),
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                className: "flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all duration-200 hover:bg-white/10 active:scale-95",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "transition-colors duration-200 ".concat(isActive ? 'text-black dark:text-white' : 'text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'),
+                                        className: "text-gray-400 hover:text-white transition-colors duration-200",
                                         children: item.icon
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/BottomNav.tsx",
-                                        lineNumber: 100,
-                                        columnNumber: 19
+                                        lineNumber: 79,
+                                        columnNumber: 21
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "hidden sm:block text-[11px] font-medium mt-1 transition-colors duration-200 ".concat(isActive ? 'text-black dark:text-white' : 'text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'),
+                                        className: "text-[10px] font-medium text-gray-400 hover:text-white transition-colors duration-200",
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/BottomNav.tsx",
-                                        lineNumber: 109,
-                                        columnNumber: 19
+                                        lineNumber: 82,
+                                        columnNumber: 21
                                     }, this)
                                 ]
                             }, item.name, true, {
                                 fileName: "[project]/src/components/BottomNav.tsx",
-                                lineNumber: 91,
-                                columnNumber: 17
+                                lineNumber: 72,
+                                columnNumber: 19
                             }, this);
-                        })
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/BottomNav.tsx",
-                        lineNumber: 67,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
+                        }
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: item.href,
+                            className: "flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all duration-200 active:scale-95 ".concat(isActive ? 'bg-white/20' : 'hover:bg-white/10'),
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "transition-colors duration-200 ".concat(isActive ? 'text-white' : 'text-gray-400 hover:text-white'),
+                                    children: item.icon
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/BottomNav.tsx",
+                                    lineNumber: 99,
+                                    columnNumber: 19
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-[10px] font-medium transition-colors duration-200 ".concat(isActive ? 'text-white' : 'text-gray-400 hover:text-white'),
+                                    children: item.name
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/BottomNav.tsx",
+                                    lineNumber: 106,
+                                    columnNumber: 19
+                                }, this)
+                            ]
+                        }, item.name, true, {
+                            fileName: "[project]/src/components/BottomNav.tsx",
+                            lineNumber: 90,
+                            columnNumber: 17
+                        }, this);
+                    })
+                }, void 0, false, {
+                    fileName: "[project]/src/components/BottomNav.tsx",
+                    lineNumber: 65,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/components/BottomNav.tsx",
-                lineNumber: 62,
+                lineNumber: 63,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
@@ -366,20 +357,20 @@ function Biography() {
                                     children: "Biography"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/biography/page.tsx",
-                                    lineNumber: 56,
+                                    lineNumber: 58,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "w-24 h-1 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent mx-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/biography/page.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 61,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/biography/page.tsx",
-                            lineNumber: 55,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -399,22 +390,22 @@ function Biography() {
                                         d: "M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/biography/page.tsx",
-                                        lineNumber: 73,
+                                        lineNumber: 75,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/biography/page.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 67,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/biography/page.tsx",
-                                lineNumber: 64,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/biography/page.tsx",
-                            lineNumber: 63,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -427,7 +418,7 @@ function Biography() {
                                         children: BIO_CONTENT.tagline
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/biography/page.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 88,
                                         columnNumber: 15
                                     }, this),
                                     BIO_CONTENT.paragraphs.map((paragraph, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -435,18 +426,18 @@ function Biography() {
                                             children: paragraph
                                         }, index, false, {
                                             fileName: "[project]/src/app/biography/page.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 94,
                                             columnNumber: 17
                                         }, this))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/biography/page.tsx",
-                                lineNumber: 84,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/biography/page.tsx",
-                            lineNumber: 83,
+                            lineNumber: 85,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -457,7 +448,7 @@ function Biography() {
                                     children: "Press Kit"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/biography/page.tsx",
-                                    lineNumber: 101,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -465,7 +456,7 @@ function Biography() {
                                     children: "Need bio text for your website or press release? Copy the formatted version below."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/biography/page.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 106,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -491,19 +482,19 @@ function Biography() {
                                                                 d: "M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/biography/page.tsx",
-                                                                lineNumber: 124,
+                                                                lineNumber: 126,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/biography/page.tsx",
-                                                            lineNumber: 116,
+                                                            lineNumber: 118,
                                                             columnNumber: 19
                                                         }, this),
                                                         copied ? "Copied!" : "Copy Full Bio"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/biography/page.tsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 114,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -523,25 +514,25 @@ function Biography() {
                                                                 d: "M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/biography/page.tsx",
-                                                                lineNumber: 145,
+                                                                lineNumber: 147,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/biography/page.tsx",
-                                                            lineNumber: 137,
+                                                            lineNumber: 139,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Copy Short Bio"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/biography/page.tsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 135,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/biography/page.tsx",
-                                            lineNumber: 111,
+                                            lineNumber: 113,
                                             columnNumber: 15
                                         }, this),
                                         copied && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -549,7 +540,7 @@ function Biography() {
                                             children: "Bio copied to clipboard!"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/biography/page.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 159,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -571,53 +562,53 @@ function Biography() {
                                                         d: "M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016.094 3.75h7.875m-8.469 6.026h16.5m-16.5 0V6a2.25 2.25 0 012.25-2.25h7.5M12 12.75h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/biography/page.tsx",
-                                                        lineNumber: 177,
+                                                        lineNumber: 179,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/biography/page.tsx",
-                                                    lineNumber: 169,
+                                                    lineNumber: 171,
                                                     columnNumber: 17
                                                 }, this),
                                                 "View Full Press Kit"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/biography/page.tsx",
-                                            lineNumber: 163,
+                                            lineNumber: 165,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/biography/page.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/biography/page.tsx",
-                            lineNumber: 100,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/biography/page.tsx",
-                    lineNumber: 53,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/biography/page.tsx",
-                lineNumber: 52,
+                lineNumber: 54,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BottomNav$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/biography/page.tsx",
-                lineNumber: 189,
+                lineNumber: 191,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/biography/page.tsx",
-        lineNumber: 51,
+        lineNumber: 53,
         columnNumber: 5
     }, this);
 }

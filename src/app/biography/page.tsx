@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import BottomNav from "@/components/BottomNav";
+import PageHeader from "@/components/PageHeader";
+import BackgroundImage from "@/components/BackgroundImage";
 import { LINKS } from "@/constants/links";
 
 // Bio content constants - update here to change all instances
@@ -48,70 +50,43 @@ export default function Biography() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black">
-      <main className="max-w-4xl mx-auto px-6 py-12 pb-32">
-        <div className="space-y-8">
-          {/* Header */}
-          <div className="text-center space-y-4">
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Biography
-            </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent mx-auto" />
-          </div>
+    <div className="relative min-h-screen overflow-hidden">
+      <BackgroundImage />
 
-          {/* Artist Image Placeholder */}
-          <div className="relative w-full aspect-square max-w-md mx-auto rounded-3xl overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900 shadow-2xl">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1}
-                stroke="currentColor"
-                className="w-32 h-32 text-gray-400 dark:text-gray-600"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                />
-              </svg>
-            </div>
-          </div>
+      <PageHeader title="Biography" />
 
-          {/* Bio Content - Single Card */}
-          <div className="bg-white/60 dark:bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-gray-200/50 dark:border-white/10 shadow-lg">
-            <div className="space-y-4 text-gray-700 dark:text-gray-300">
-              {/* Tagline - lowercase, italic, thin, smaller */}
-              <p className="text-base font-light italic text-gray-600 dark:text-gray-400 lowercase">
-                {BIO_CONTENT.tagline}
+      <main className="relative max-w-4xl mx-auto px-6 pb-32">
+        <div className="space-y-12">
+          {/* Bio Content - No Card Background */}
+          <div className="space-y-6 text-white">
+            {/* Tagline */}
+            <p className="text-xl font-light italic text-white/80 lowercase">
+              {BIO_CONTENT.tagline}
+            </p>
+
+            {/* Bio Paragraphs */}
+            {BIO_CONTENT.paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-lg leading-relaxed text-white/90">
+                {paragraph}
               </p>
-
-              {/* Bio Paragraphs */}
-              {BIO_CONTENT.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-lg leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            ))}
           </div>
 
-          {/* Copy Bio Section */}
-          <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20 rounded-2xl p-8 border border-purple-200/50 dark:border-purple-500/30 shadow-lg">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+          {/* Copy Bio Section - Minimal Design */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-white">
               Press Kit
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Need bio text for your website or press release? Copy the
-              formatted version below.
+            <p className="text-lg text-white/80">
+              Need bio text for your website or press release? Copy the formatted version below.
             </p>
 
             <div className="space-y-4">
               {/* Copy Bio Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => copyToClipboard(BIO_CONTENT.full)}
-                  className="flex-1 px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                  className="flex-1 px-8 py-4 bg-white/20 backdrop-blur-md text-white rounded-2xl font-semibold border border-white/30 hover:bg-white/30 transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +107,7 @@ export default function Biography() {
 
                 <button
                   onClick={() => copyToClipboard(BIO_CONTENT.short)}
-                  className="flex-1 px-6 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-purple-500 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                  className="flex-1 px-8 py-4 bg-white/20 backdrop-blur-md text-white rounded-2xl font-semibold border border-white/30 hover:bg-white/30 transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +129,7 @@ export default function Biography() {
 
               {/* Success Message */}
               {copied && (
-                <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-green-700 dark:text-green-300 text-center font-medium animate-fade-in">
+                <div className="p-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl text-white text-center font-medium">
                   Bio copied to clipboard!
                 </div>
               )}
@@ -164,22 +139,8 @@ export default function Biography() {
                 href={LINKS.pressKit}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-6 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                className="block w-full px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:bg-white/90 transition-all duration-200 hover:scale-[1.02] active:scale-95 text-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016.094 3.75h7.875m-8.469 6.026h16.5m-16.5 0V6a2.25 2.25 0 012.25-2.25h7.5M12 12.75h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-                  />
-                </svg>
                 View Full Press Kit
               </a>
             </div>

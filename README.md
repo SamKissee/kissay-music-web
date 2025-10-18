@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kissay Music
 
-## Getting Started
+Official website for **Kissay** - Electronic music producer, DJ, and festival curator from Idaho.
 
-First, run the development server:
+## About Kissay
+
+All-star artistry meets an experimental edge. Kissay is a driving force behind the Northwest electronic music scene, specializing in dubstep, drum & bass, club music, global beats, and wave. As the co-owner, artistic director, and music curator of Konnexion Music Festival, Kissay has led by example on how to act with authenticity and integrity in the music industry.
+
+### Genres
+
+- Dubstep
+- Drum & Bass (DNB)
+- Bass Music
+- Club / Deconstructed Club
+- Global Beats
+- Wave Music
+- Experimental Electronic
+
+### Based In
+
+Idaho / Pacific Northwest
+
+## Listen & Follow
+
+### Streaming Platforms
+
+- [Spotify](https://open.spotify.com/artist/59hfvESxbtxZfe3f7qF0Bg?si=-LufjcihRlKtEa4U0Q_yGg&nd=1&dlsi=0f19976e12ca4d2f)
+- [Apple Music](https://music.apple.com/us/artist/kissay/1400694075)
+- [SoundCloud](https://soundcloud.com/kissaymusic)
+- [Bandcamp](https://kissay.bandcamp.com/music)
+
+### Social Media
+
+- [Instagram](https://www.instagram.com/kissaymusic)
+- [Facebook](https://www.facebook.com/KissayMusic/)
+
+### Shows & Events
+
+- [Bandsintown](https://www.bandsintown.com/a/15591484-kissay) - Upcoming shows and tour dates
+
+### Merch
+
+- [Kissay Store](https://kissay.bigcartel.com)
+
+---
+
+## Development
+
+This website is built with [Next.js 15](https://nextjs.org) and [Tailwind CSS 4](https://tailwindcss.com).
+
+### Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS 4
+- **Fonts:** Space Grotesk, Archivo Black
+- **Icons:** React Icons
+- **Animation:** Framer Motion
+- **Deployment:** Netlify
 
-## Learn More
+### Features
 
-To learn more about Next.js, take a look at the following resources:
+- Fully responsive design
+- SEO optimized with meta tags, Open Graph, and structured data
+- Dynamic sitemap and robots.txt
+- Social share optimization
+- Contact form with spam protection
+- Music player embeds (Spotify, SoundCloud, YouTube)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All rights reserved. Website content and design © Kissay Music.

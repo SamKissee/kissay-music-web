@@ -122,7 +122,7 @@ export default function Contact() {
       } else {
         setStatus("error");
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -262,7 +262,7 @@ export default function Contact() {
             {/* Contact Info & Social - Editorial Design */}
             <div className="space-y-12">
               {/* Contact Methods */}
-              <div className="space-y-8">
+              {/* <div className="space-y-8">
                 <h2 className="text-display text-heading-lg text-white">
                   Contact Info
                 </h2>
@@ -295,7 +295,7 @@ export default function Contact() {
                     </div>
                   </a>
                 </div>
-              </div>
+              </div> */}
 
               {/* Social Media */}
               <div className="space-y-8">

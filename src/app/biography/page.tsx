@@ -56,37 +56,47 @@ export default function Biography() {
       <PageHeader title="Biography" />
 
       <main className="relative max-w-4xl mx-auto px-6 pb-32">
-        <div className="space-y-12">
-          {/* Bio Content - No Card Background */}
-          <div className="space-y-6 text-white">
-            {/* Tagline */}
-            <p className="text-xl font-light italic text-white/80 lowercase">
-              {BIO_CONTENT.tagline}
-            </p>
-
-            {/* Bio Paragraphs */}
-            {BIO_CONTENT.paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-lg leading-relaxed text-white/90">
-                {paragraph}
+        <div className="space-y-16">
+          {/* Bio Content - Editorial Layout */}
+          <div className="space-y-8 text-white">
+            {/* Tagline - Large Editorial Style */}
+            <div className="border-l-4 border-white/20 pl-6">
+              <p className="text-display text-heading-lg text-white/90 italic lowercase leading-tight">
+                {BIO_CONTENT.tagline}
               </p>
-            ))}
+            </div>
+
+            {/* Bio Paragraphs - Editorial Typography */}
+            <div className="space-y-6">
+              {BIO_CONTENT.paragraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-body-lg leading-relaxed text-white/90"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
 
-          {/* Copy Bio Section - Minimal Design */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">
-              Press Kit
-            </h2>
-            <p className="text-lg text-white/80">
-              Need bio text for your website or press release? Copy the formatted version below.
-            </p>
+          {/* Copy Bio Section - Editorial Design */}
+          <div className="space-y-8">
+            <div className="border-t border-white/20 pt-8">
+              <h2 className="text-display text-heading-md text-white mb-4">
+                Press Kit
+              </h2>
+              <p className="text-body-lg text-white/80">
+                Need bio text for your website or press release? Copy the
+                formatted version below.
+              </p>
+            </div>
 
             <div className="space-y-4">
               {/* Copy Bio Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => copyToClipboard(BIO_CONTENT.full)}
-                  className="flex-1 px-8 py-4 bg-white/20 backdrop-blur-md text-white rounded-2xl font-semibold border border-white/30 hover:bg-white/30 transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                  className="flex-1 px-8 py-4 bg-white/20 backdrop-blur-md text-white rounded-2xl font-semibold border border-white/30 hover:bg-white/30 transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 text-body"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +117,7 @@ export default function Biography() {
 
                 <button
                   onClick={() => copyToClipboard(BIO_CONTENT.short)}
-                  className="flex-1 px-8 py-4 bg-white/20 backdrop-blur-md text-white rounded-2xl font-semibold border border-white/30 hover:bg-white/30 transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                  className="flex-1 px-8 py-4 bg-white/20 backdrop-blur-md text-white rounded-2xl font-semibold border border-white/30 hover:bg-white/30 transition-all duration-200 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 text-body"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +149,7 @@ export default function Biography() {
                 href={LINKS.pressKit}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:bg-white/90 transition-all duration-200 hover:scale-[1.02] active:scale-95 text-center"
+                className="block w-full px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:bg-white/90 transition-all duration-200 hover:scale-[1.02] active:scale-95 text-center text-body"
               >
                 View Full Press Kit
               </a>

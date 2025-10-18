@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 interface PageHeaderProps {
   title: string;
@@ -25,13 +25,13 @@ export default function PageHeader({ title }: PageHeaderProps) {
               />
             </div>
           </Link>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white drop-shadow-lg uppercase">
+          <h1 className="text-display text-heading-xl text-white drop-shadow-lg uppercase tracking-tight">
             {title}
           </h1>
         </div>
 
         {/* Mobile Layout: Stacked and centered */}
-        <div className="sm:hidden flex flex-col items-center gap-4">
+        <div className="sm:hidden flex flex-col items-center gap-6">
           <Link href="/" className="group">
             <div className="h-10 relative transition-all duration-300 group-hover:scale-110 drop-shadow-lg">
               <Image
@@ -44,7 +44,7 @@ export default function PageHeader({ title }: PageHeaderProps) {
               />
             </div>
           </Link>
-          <h1 className="text-3xl font-bold text-white drop-shadow-lg uppercase">
+          <h1 className="text-display text-heading-lg text-white drop-shadow-lg uppercase tracking-tight text-center">
             {title}
           </h1>
         </div>

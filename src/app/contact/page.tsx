@@ -136,11 +136,13 @@ export default function Contact() {
       <PageHeader title="Contact" />
 
       <main className="relative max-w-4xl mx-auto px-6 pb-32">
-        <div className="space-y-12 mt-10">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form - No Card */}
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white">Send a Message</h2>
+        <div className="space-y-16 mt-10">
+          <div className="grid md:grid-cols-2 gap-16">
+            {/* Contact Form - Editorial Design */}
+            <div className="space-y-8">
+              <h2 className="text-display text-heading-lg text-white">
+                Send a Message
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Honeypot field - hidden from users, only bots will fill it */}
                 <input
@@ -157,7 +159,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-white/80 mb-2"
+                    className="block text-body-sm font-medium text-white/80 mb-3"
                   >
                     Name *
                   </label>
@@ -167,7 +169,7 @@ export default function Contact() {
                     name="name"
                     minLength={2}
                     maxLength={100}
-                    className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all text-body"
                     placeholder="Your name"
                     required
                     disabled={status === "submitting"}
@@ -177,7 +179,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-white/80 mb-2"
+                    className="block text-body-sm font-medium text-white/80 mb-3"
                   >
                     Email *
                   </label>
@@ -186,7 +188,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all text-body"
                     placeholder="your@email.com"
                     required
                     disabled={status === "submitting"}
@@ -196,7 +198,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-white/80 mb-2"
+                    className="block text-body-sm font-medium text-white/80 mb-3"
                   >
                     Subject *
                   </label>
@@ -206,7 +208,7 @@ export default function Contact() {
                     name="subject"
                     minLength={3}
                     maxLength={200}
-                    className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all text-body"
                     placeholder="What's this about?"
                     required
                     disabled={status === "submitting"}
@@ -216,7 +218,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-white/80 mb-2"
+                    className="block text-body-sm font-medium text-white/80 mb-3"
                   >
                     Message *
                   </label>
@@ -226,7 +228,7 @@ export default function Contact() {
                     rows={5}
                     minLength={10}
                     maxLength={5000}
-                    className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all resize-none text-body"
                     placeholder="Your message..."
                     required
                     disabled={status === "submitting"}
@@ -236,7 +238,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:bg-white/90 transition-all duration-200 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className="w-full px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:bg-white/90 transition-all duration-200 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 text-body"
                 >
                   {status === "submitting" ? "Sending..." : "Send Message"}
                 </button>
@@ -257,11 +259,13 @@ export default function Contact() {
               </form>
             </div>
 
-            {/* Contact Info & Social - No Cards */}
-            <div className="space-y-8">
+            {/* Contact Info & Social - Editorial Design */}
+            <div className="space-y-12">
               {/* Contact Methods */}
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-white">Contact Info</h2>
+              <div className="space-y-8">
+                <h2 className="text-display text-heading-lg text-white">
+                  Contact Info
+                </h2>
                 <div className="space-y-4">
                   <a
                     href={`mailto:${CONTACT.email}`}
@@ -294,8 +298,10 @@ export default function Contact() {
               </div>
 
               {/* Social Media */}
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-white">Follow Me</h2>
+              <div className="space-y-8">
+                <h2 className="text-display text-heading-lg text-white">
+                  Follow Me
+                </h2>
                 <div className="flex flex-wrap gap-6">
                   <a
                     href={LINKS.spotify}
@@ -364,11 +370,11 @@ export default function Contact() {
               </div>
 
               {/* Booking Info */}
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-white">
+              <div className="space-y-4">
+                <h3 className="text-display text-heading-md text-white">
                   Booking & Collaborations
                 </h3>
-                <p className="text-lg text-white/80">
+                <p className="text-body-lg text-white/80">
                   For booking inquiries, collaborations, or music festival
                   consultations, please reach out via email or through the
                   contact form.

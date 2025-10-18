@@ -1,9 +1,26 @@
+import { Metadata } from "next";
 import BottomNav from "@/components/BottomNav";
 import PageHeader from "@/components/PageHeader";
 import BackgroundImage from "@/components/BackgroundImage";
 import CopyBioButtons from "@/components/CopyBioButtons";
 import ImageGrid from "@/components/ImageGrid";
 import { LINKS } from "@/constants/links";
+
+export const metadata: Metadata = {
+  title: "Biography - Electronic Music Producer & DJ from Idaho",
+  description: "Learn about Kissay - Northwest electronic music producer, DJ, and Konnexion Music Festival curator. Experience in stage design, label management, talent buying, and festival organizing across Idaho and the Pacific Northwest.",
+  openGraph: {
+    title: "Biography - Kissay | Electronic Music Producer & DJ from Idaho",
+    description: "Learn about Kissay - Northwest electronic music producer, DJ, and Konnexion Music Festival curator. Multi-genre bass music selectah from Idaho.",
+    images: ["/kissay_social_share.webp"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Biography - Kissay | Electronic Music Producer & DJ from Idaho",
+    description: "Learn about Kissay - Northwest electronic music producer, DJ, and Konnexion Music Festival curator.",
+    images: ["/kissay_social_share.webp"],
+  },
+};
 
 // Bio content constants - update here to change all instances
 const BIO_CONTENT = {

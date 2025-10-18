@@ -15,6 +15,8 @@ import {
 } from "react-icons/fa";
 import { SiBandsintown } from "react-icons/si";
 
+// Metadata is exported from a separate metadata file for client components
+
 export default function Contact() {
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import BottomNav from "@/components/BottomNav";
 import PageHeader from "@/components/PageHeader";
 import BackgroundImage from "@/components/BackgroundImage";
@@ -10,6 +11,22 @@ import {
   FaBandcamp,
   FaYoutube,
 } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: "Music - Dubstep, Drum & Bass, Wave, Global Beats",
+  description: "Listen to Kissay's latest dubstep, drum & bass, club, wave, and global beats music. Stream on Spotify, Apple Music, SoundCloud, and Bandcamp. Idaho bass music producer and DJ.",
+  openGraph: {
+    title: "Music - Kissay | Dubstep, Drum & Bass, Wave, Global Beats",
+    description: "Listen to Kissay's latest dubstep, drum & bass, club, wave, and global beats music. Stream on Spotify, Apple Music, SoundCloud, and Bandcamp.",
+    images: ["/kissay_social_share.webp"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Music - Kissay | Dubstep, Drum & Bass, Wave, Global Beats",
+    description: "Listen to Kissay's latest dubstep, drum & bass, club, wave, and global beats music on all major platforms.",
+    images: ["/kissay_social_share.webp"],
+  },
+};
 
 export default function Music() {
   return (

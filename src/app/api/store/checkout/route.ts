@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
     // Fetch current prices from Printful to prevent price manipulation
     const lineItems = await Promise.all(
-      items.map(async (item: { variantId: number; quantity: number }) => {
+      items.map(async (item: { variantId: number; syncVariantId: number; quantity: number }) => {
         const variant = await getProductVariant(item.variantId);
 
         if (!variant) {
@@ -45,6 +45,7 @@ export async function POST(request: Request) {
           quantity: item.quantity,
           images: variant.product.image ? [variant.product.image] : [],
           variant_id: variant.variant_id,
+          sync_variant_id: item.syncVariantId, // Include sync variant ID for Printful
         };
       })
     );

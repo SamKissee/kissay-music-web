@@ -153,7 +153,8 @@ export async function createOrder(orderData: {
     phone?: string;
   };
   items: Array<{
-    variant_id: number;
+    sync_variant_id?: number; // For sync products (products with designs already uploaded)
+    variant_id?: number; // For manual products (legacy)
     quantity: number;
     retail_price?: string;
   }>;

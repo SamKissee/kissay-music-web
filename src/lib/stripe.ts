@@ -22,6 +22,7 @@ export async function createCheckoutSession(
     quantity: number;
     images?: string[];
     variant_id: number;
+    sync_variant_id: number;
   }>,
   shippingCost: number,
   metadata: {
@@ -42,6 +43,7 @@ export async function createCheckoutSession(
               images: item.images,
               metadata: {
                 variant_id: item.variant_id.toString(),
+                sync_variant_id: item.sync_variant_id.toString(),
               },
             },
             unit_amount: item.price,

@@ -39,41 +39,49 @@ export async function POST(request: Request) {
     // Handle the event
     switch (event.type) {
       case 'checkout.session.completed': {
-        const session = event.data.object as {
-          id: string;
-          metadata?: { order_id?: string };
-          customer_details?: { email?: string };
-          shipping_details?: unknown;
-          shipping?: unknown;
-          amount_subtotal?: number;
-        };
+        const sessionEvent = event.data.object as Stripe.Checkout.Session;
 
-        console.log('Payment successful for session:', session.id);
+        console.log('Payment successful for session:', sessionEvent.id);
 
-        // Extract order information
-        const orderId = session.metadata?.order_id;
-        const customerEmail = session.customer_details?.email;
-        const shippingDetails = session.shipping_details || session.shipping;
-
-        if (!orderId || !customerEmail || !shippingDetails) {
-          console.error('Missing required order information', {
-            orderId,
-            customerEmail,
-            hasShipping: !!shippingDetails,
-          });
-          break;
-        }
-
-        // Fetch line items to get product details
+        // Initialize Stripe client
         const stripe = new (await import('stripe')).default(
           process.env.STRIPE_SECRET_KEY!,
           { apiVersion: '2025-09-30.clover' }
         );
 
-        const lineItems = await stripe.checkout.sessions.listLineItems(
-          session.id,
-          { expand: ['data.price.product'] }
+        // Fetch the full session with expanded line_items
+        const session = await stripe.checkout.sessions.retrieve(
+          sessionEvent.id,
+          {
+            expand: ['line_items.data.price.product'],
+          }
         );
+
+        // Extract order information
+        const orderId = session.metadata?.order_id;
+        const customerDetails = session.customer_details;
+        const customerEmail = customerDetails?.email;
+        const customerName = customerDetails?.name;
+        const shippingAddress = customerDetails?.address;
+
+        console.log('Extracted order info:', {
+          orderId,
+          customerEmail,
+          customerName,
+          shippingAddress,
+        });
+
+        if (!orderId || !customerEmail || !shippingAddress) {
+          console.error('Missing required order information', {
+            orderId,
+            customerEmail,
+            hasShippingAddress: !!shippingAddress,
+          });
+          break;
+        }
+
+        // Get line items from the expanded session
+        const lineItems = session.line_items;
 
         // Build Printful order items
         const printfulItems = lineItems.data
@@ -84,56 +92,74 @@ export async function POST(request: Request) {
           })
           .map((item) => {
             const product = item.price?.product as Stripe.Product;
-            const variantId = product.metadata?.variant_id;
+            const syncVariantId = product.metadata?.sync_variant_id;
 
-            if (!variantId) {
-              throw new Error(`No variant_id found for product ${product.id}`);
+            if (!syncVariantId) {
+              throw new Error(`No sync_variant_id found for product ${product.id}`);
             }
 
             return {
-              variant_id: parseInt(variantId),
+              sync_variant_id: parseInt(syncVariantId),
               quantity: item.quantity || 1,
               retail_price: ((item.amount_total || 0) / 100).toFixed(2),
             };
           });
 
-        // Create Printful order
-        const shipping = shippingDetails as {
-          name?: string;
-          address?: {
-            line1?: string;
-            city?: string;
-            state?: string;
-            country?: string;
-            postal_code?: string;
-          };
-        };
-
-        const printfulOrder = await createOrder({
-          external_id: orderId,
-          recipient: {
-            name: shipping.name || 'Customer',
-            address1: shipping.address?.line1 || '',
-            city: shipping.address?.city || '',
-            state_code: shipping.address?.state,
-            country_code: shipping.address?.country || 'US',
-            zip: shipping.address?.postal_code || '',
-            email: customerEmail,
-          },
-          items: printfulItems,
-          retail_costs: {
-            currency: 'USD',
-            subtotal: ((session.amount_subtotal || 0) / 100).toFixed(2),
-            shipping: '8.95', // Match the shipping cost from checkout
-          },
+        // Create Printful order with customer details
+        console.log('Creating Printful order with customer details:', {
+          name: customerName,
+          address: shippingAddress,
         });
 
-        console.log('Printful order created:', printfulOrder.id);
+        try {
+          const printfulOrder = await createOrder({
+            external_id: orderId,
+            recipient: {
+              name: customerName || 'Customer',
+              address1: shippingAddress.line1 || '',
+              city: shippingAddress.city || '',
+              state_code: shippingAddress.state || undefined,
+              country_code: shippingAddress.country || 'US',
+              zip: shippingAddress.postal_code || '',
+              email: customerEmail,
+            },
+            items: printfulItems,
+            retail_costs: {
+              currency: 'USD',
+              subtotal: ((session.amount_subtotal || 0) / 100).toFixed(2),
+              shipping: '8.95', // Match the shipping cost from checkout
+            },
+          });
 
-        // Confirm the order to move it to fulfillment
-        await confirmOrder(printfulOrder.id);
+          console.log('Printful order created:', printfulOrder.id);
 
-        console.log('Printful order confirmed:', printfulOrder.id);
+          // Only confirm orders in production (test orders stay as drafts)
+          const isProduction = process.env.NODE_ENV === 'production';
+
+          if (isProduction) {
+            // Confirm the order to move it to fulfillment
+            await confirmOrder(printfulOrder.id);
+            console.log('Printful order confirmed and sent to fulfillment:', printfulOrder.id);
+          } else {
+            console.log('Printful order left as DRAFT (development mode):', printfulOrder.id);
+            console.log('→ To fulfill this order, manually confirm it in the Printful dashboard');
+          }
+        } catch (printfulError) {
+          console.error('Error creating Printful order:', printfulError);
+
+          // Check if it's the "no print files" error
+          if (printfulError instanceof Error && printfulError.message.includes('print files')) {
+            console.error('⚠️  PRINTFUL SETUP REQUIRED:');
+            console.error('   Your products need designs/artwork uploaded in Printful dashboard');
+            console.error('   Go to: https://www.printful.com/dashboard/products');
+            console.error('   Payment was successful - customer received confirmation');
+            console.error(`   Order ID: ${orderId}`);
+            console.error(`   Customer: ${customerEmail}`);
+          }
+
+          // Don't throw - payment was successful, just log the Printful issue
+          // In production, you'd want to set up alerts for this
+        }
 
         break;
       }

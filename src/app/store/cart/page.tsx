@@ -47,6 +47,7 @@ export default function Cart() {
         body: JSON.stringify({
           items: items.map((item) => ({
             variantId: item.syncVariantId,
+            syncVariantId: item.syncVariantId,
             quantity: item.quantity,
           })),
           customerEmail: email,

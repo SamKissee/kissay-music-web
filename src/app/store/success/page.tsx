@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, Suspense } from "react";
 import Link from "next/link";
 import BottomNav from "@/components/BottomNav";
 import PageHeader from "@/components/PageHeader";
@@ -10,21 +9,12 @@ import { useCartStore } from "@/store/cartStore";
 import { FaCheck, FaShoppingBag } from "react-icons/fa";
 
 function SuccessContent() {
-  const searchParams = useSearchParams();
-  const sessionId = searchParams.get("session_id");
   const clearCart = useCartStore((state) => state.clearCart);
-  const [orderId, setOrderId] = useState<string | null>(null);
 
   useEffect(() => {
     // Clear the cart after successful purchase
     clearCart();
-
-    // Extract order ID from session if needed
-    if (sessionId) {
-      // You could fetch additional order details here
-      setOrderId(sessionId);
-    }
-  }, [sessionId, clearCart]);
+  }, [clearCart]);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -61,15 +51,6 @@ function SuccessContent() {
               <li>Delivery typically takes 5-7 business days</li>
             </ul>
           </div>
-
-          {orderId && (
-            <div className="bg-white/10 rounded-xl p-4">
-              <p className="text-white/70 text-body-sm">Session ID</p>
-              <p className="text-white text-body-sm font-mono break-all mt-1">
-                {orderId}
-              </p>
-            </div>
-          )}
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-6">

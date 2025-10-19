@@ -106,8 +106,7 @@ export default function ProductDetail({
       color,
       price: parseFloat(selectedVariant.retail_price),
       quantity: 1,
-      image:
-        selectedVariant.files[0]?.preview_url || selectedVariant.product.image,
+      image: product.sync_product.thumbnail_url,
     });
 
     setTimeout(() => setAdding(false), 1000);
@@ -183,9 +182,9 @@ export default function ProductDetail({
         <div className="grid md:grid-cols-2 gap-12">
           {/* Product Image */}
           <div className="aspect-square bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden">
-            {(selectedVariant?.files[0]?.preview_url || product.sync_product.thumbnail_url) ? (
+            {product.sync_product.thumbnail_url ? (
               <img
-                src={selectedVariant?.files[0]?.preview_url || product.sync_product.thumbnail_url}
+                src={product.sync_product.thumbnail_url}
                 alt={product.sync_product.name}
                 className="w-full h-full object-cover"
               />

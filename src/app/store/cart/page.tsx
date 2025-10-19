@@ -8,8 +8,6 @@ import BackgroundImage from "@/components/BackgroundImage";
 import { useCartStore } from "@/store/cartStore";
 import { FaArrowLeft, FaTrash, FaMinus, FaPlus } from "react-icons/fa";
 
-const SHIPPING_COST = 8.95;
-
 export default function Cart() {
   const items = useCartStore((state) => state.items);
   const removeItem = useCartStore((state) => state.removeItem);
@@ -21,7 +19,17 @@ export default function Cart() {
   const [error, setError] = useState<string | null>(null);
 
   const subtotal = getTotalPrice();
-  const total = subtotal + SHIPPING_COST;
+
+  // Calculate shipping based on quantity (Printful rates)
+  // $8.49 first item + $2.50 each additional
+  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
+  const shippingCost = totalItems === 0
+    ? 0
+    : totalItems === 1
+    ? 8.49
+    : 8.49 + ((totalItems - 1) * 2.50);
+
+  const total = subtotal + shippingCost;
 
   async function handleCheckout(e: React.FormEvent) {
     e.preventDefault();
@@ -181,8 +189,8 @@ export default function Cart() {
                     <span>${subtotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-white/80 text-body">
-                    <span>Shipping</span>
-                    <span>${SHIPPING_COST.toFixed(2)}</span>
+                    <span>Shipping ({totalItems} item{totalItems !== 1 ? 's' : ''})</span>
+                    <span>${shippingCost.toFixed(2)}</span>
                   </div>
                   <div className="border-t border-white/20 pt-3 flex justify-between text-white text-body-lg font-semibold">
                     <span>Total</span>

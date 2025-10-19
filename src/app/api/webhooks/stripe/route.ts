@@ -124,7 +124,9 @@ export async function POST(request: Request) {
             retail_costs: {
               currency: "USD",
               subtotal: ((session.amount_subtotal || 0) / 100).toFixed(2),
-              shipping: "8.95", // Match the shipping cost from checkout
+              shipping: (
+                ((session.amount_total || 0) - (session.amount_subtotal || 0)) / 100
+              ).toFixed(2),
             },
           });
 

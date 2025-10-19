@@ -50,8 +50,14 @@ export async function POST(request: Request) {
       })
     );
 
-    // Calculate shipping (simplified - you may want more complex logic)
-    const shippingCost = 895; // $8.95 flat rate shipping in cents
+    // Calculate shipping based on Printful's typical rates
+    // Hoodies/sweatshirts: $8.49 first + $2.50 each additional
+    // T-shirts: $4.75 first + $2.20 each additional
+    // Using conservative estimate (hoodie rate) for all products
+    const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
+    const shippingCost = totalItems === 1
+      ? 849  // $8.49 for first item
+      : 849 + ((totalItems - 1) * 250); // + $2.50 for each additional
 
     // Generate unique order ID
     const orderId = `KISSAY-${Date.now()}`;

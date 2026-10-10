@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getBlogPosts } from '@/lib/hygraph'
+import { getReleases } from '@/lib/releases'
 
 export const revalidate = 3600
 
@@ -32,6 +33,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/releases`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -47,5 +54,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  return [...staticRoutes, ...postRoutes]
+  const releases = await getReleases()
+  const releaseRoutes: MetadataRoute.Sitemap = releases.map((release) => ({
+    url: `${baseUrl}/releases/${release.slug}`,
+    lastModified: release.releaseDate ? new Date(release.releaseDate) : new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
+  return [...staticRoutes, ...releaseRoutes, ...postRoutes]
 }

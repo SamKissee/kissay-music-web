@@ -1,4 +1,7 @@
 import { Metadata } from "next";
+import Link from "next/link";
+import ReleaseCard from "@/components/ReleaseCard";
+import { getReleases } from "@/lib/releases";
 import BottomNav from "@/components/BottomNav";
 import PageHeader from "@/components/PageHeader";
 import BackgroundImage from "@/components/BackgroundImage";
@@ -28,7 +31,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Music() {
+export const revalidate = 60;
+
+export default async function Music() {
+  const latest = (await getReleases()).slice(0, 3);
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       <BackgroundImage />
@@ -79,6 +86,35 @@ export default function Music() {
             </a>
           </div>
         </div>
+        {latest.length > 0 && (
+          <section className="mb-16 space-y-6">
+            <div className="flex items-end justify-between gap-4">
+              <h2 className="text-display text-heading-md text-white">
+                Latest Releases
+              </h2>
+              <Link
+                href="/releases"
+                className="shrink-0 text-body-sm font-semibold text-white/70 transition-colors hover:text-white"
+              >
+                All releases &rarr;
+              </Link>
+            </div>
+            <ul className="grid grid-cols-2 gap-6 sm:grid-cols-3">
+              {latest.map((release, i) => (
+                <li
+                  key={release.id}
+                  className={i === 2 ? "hidden sm:block" : undefined}
+                >
+                  <ReleaseCard
+                    release={release}
+                    sizes="(max-width: 640px) 50vw, 280px"
+                  />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         <div className="space-y-16">
           {/* Music Players */}
           <div className="space-y-12">

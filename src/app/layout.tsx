@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import StructuredData from "@/components/StructuredData";
+import Analytics from "@/components/Analytics";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -111,6 +112,7 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${archivoBlack.variable} antialiased overflow-x-hidden`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

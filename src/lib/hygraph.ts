@@ -19,7 +19,7 @@ const client = endpoint
     })
   : null;
 
-async function hygraphRequest<T>(
+export async function hygraphRequest<T>(
   query: string,
   variables?: Record<string, unknown>,
 ): Promise<T | null> {
